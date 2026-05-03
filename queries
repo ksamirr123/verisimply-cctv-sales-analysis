@@ -1,0 +1,69 @@
+---
+
+## 📊 SQL Queries
+
+### 1. Inquiry to Sale Funnel
+```sql
+SELECT 
+    stage,
+    COUNT(*) AS total,
+    ROUND(
+        COUNT(*) * 100.0 / 
+        FIRST_VALUE(COUNT(*)) OVER (ORDER BY stage_order), 1
+    ) AS funnel_pct
+FROM sales_pipeline
+GROUP BY stage, stage_order
+ORDER BY stage_order;
+```
+**Finding:** Identified exact drop-off point in inquiry-to-sale journey
+
+---
+
+### 2. Top Packages by Revenue
+```sql
+SELECT 
+    package_name,
+    COUNT(*) AS total_sales,
+    SUM(sale_value) AS total_revenue,
+    ROUND(AVG(days_to_close), 1) AS avg_days_to_close
+FROM sales
+GROUP BY package_name
+ORDER BY total_revenue DESC;
+```
+**Finding:** Top 3 packages drove majority of revenue
+
+---
+
+### 3. Peak Inquiry Period
+```sql
+SELECT 
+    MONTHNAME(inquiry_date) AS month,
+    product_type,
+    COUNT(*) AS total_inquiries,
+    SUM(CASE WHEN status = 'Converted' 
+        THEN 1 ELSE 0 END) AS conversions,
+    ROUND(
+        SUM(CASE WHEN status = 'Converted' 
+            THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 1
+    ) AS conversion_rate
+FROM inquiries
+GROUP BY MONTHNAME(inquiry_date), product_type
+ORDER BY total_inquiries DESC;
+```
+**Finding:** Peak inquiry periods identified by product type and month
+
+---
+
+## 📈 Dashboard (Power BI)
+Built for non-technical management — self-service analytics:
+- Total installs, revenue, conversion rate (KPI cards)
+- Monthly trend — installs and revenue over time
+- Product-wise inquiry and conversion breakdown
+- Drill-through: click any product → full detail view
+
+---
+
+## 🎯 Key Takeaway
+Non-technical stakeholders should never need to ask 
+for data — they should be able to answer their own 
+questions from a well-designed dashboard.
