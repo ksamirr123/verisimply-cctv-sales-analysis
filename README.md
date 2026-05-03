@@ -32,3 +32,7 @@ and built a live Power BI dashboard for management.
 
 ## 🗂️ Repository Structure
 <img width="356" height="285" alt="image" src="https://github.com/user-attachments/assets/d249ea84-52f5-4177-a4e8-aaeacc7e8658" />
+
+## Dashboard 
+<img width="2430" height="1519" alt="VeriSimply_Dashboard" src="https://github.com/user-attachments/assets/7573bcd5-cfa5-4313-8f21-a269c15b6225" />
+
