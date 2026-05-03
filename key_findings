@@ -1,0 +1,23 @@
+# Key Findings — VeriSimply CCTV Analysis
+
+## Finding 1: Funnel Drop-off
+- Clear drop-off point identified between Quote Given and Sale Closed
+- This stage had lowest conversion — targeted for improvement
+
+## Finding 2: Top Packages
+- Top 3 CCTV packages drove majority of total revenue
+- Lower-tier packages had higher inquiry volume but lower conversion
+
+## Finding 3: Peak Demand Periods
+- Specific months showed 2-3x higher inquiry volume
+- Product-specific peaks identified — different packages peak at different times
+
+## Business Decisions Made
+1. Inventory aligned to peak demand periods
+2. Marketing spend redirected to high-conversion product types
+3. Management dashboard replaced manual monthly reporting
+
+## PM Translation
+- Funnel analysis = identifying where users drop off in a product flow
+- Peak period = feature rollout timing
+- Dashboard = self-service metrics for non-technical stakeholders
