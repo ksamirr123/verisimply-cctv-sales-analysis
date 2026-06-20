@@ -7,7 +7,7 @@ and built a live Power BI dashboard for management.
 
 **Tools:** SQL · Excel · Power BI  
 **Type:** Real Freelance Client Work  
-**Year:** 2025
+**Year:** 2024
 
 ---
 
