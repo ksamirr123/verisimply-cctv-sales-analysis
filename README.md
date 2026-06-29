@@ -11,7 +11,7 @@ and built a live Power BI dashboard for management.
 
 ---
 
-## 🔍 Key Findings
+## 🔍 Key Finding
 
 | Finding | Detail |
 |--------|--------|
